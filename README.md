@@ -8,10 +8,11 @@ transformer decoder block from disk, computes it on the CPU, releases its weight
 tensors, and proceeds to the next. No GPU, API key or separate Python install is
 needed by the packaged apps.
 
-**Development release: 2.1.0.** The apps are unsigned. Local tests run on Linux;
-native Windows and Intel Mac builds are checked by the repository workflow when
-it runs. Ventura itself and physical devices still need validation. See
-[the test report](TEST-REPORT.md) for completed checks and limitations.
+**Development release: 2.1.0.** The apps are unsigned. Linux tests, native Windows
+Server 2022 installer/CPU checks, and Intel macOS 15 packaging/Tk/NumPy checks
+[passed](https://github.com/aamiraria911-a11y/RamPilot/actions/runs/40046458866).
+Ventura itself and physical devices still need validation. See
+[the test report](TEST-REPORT.md) for exact checks and limitations.
 
 [Download releases](https://github.com/aamiraria911-a11y/RamPilot/releases) ·
 [Install and use](PLATFORMS.md) · [Build from source](BUILDING.md) ·

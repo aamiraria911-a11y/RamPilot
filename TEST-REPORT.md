@@ -36,11 +36,21 @@ with publisher SHA-256 values. Package integrity, architecture, symlink/launcher
 permissions, latest source inclusion and release hashes are checked during local
 packaging. SHA256SUMS.txt identifies the final downloadable files.
 
-The GitHub workflow is configured to run the packaged Windows streaming tests,
-Windows installer/app startup checks and Intel Mac Tk/NumPy checks on native
-hosted runners. Their current result must be read from the actual workflow run;
-configuration alone is not evidence that those tests passed. No physical device
-or macOS Ventura execution has been performed by the local Linux host.
+The native hosted [workflow run](https://github.com/aamiraria911-a11y/RamPilot/actions/runs/40046458866)
+passed all three build/check jobs:
+
+- Ubuntu: all 29 Python tests and the standalone NumPy smoke fixture.
+- Windows Server 2022: clean .NET compilation with zero warnings/errors, complete
+  installer assembly, all 12 C# desktop checks, all eight packaged PyTorch engine
+  tests, silent setup into a temporary folder and installed app startup smoke.
+- Intel macOS 15: checksum-verified runtime assembly, ZIP packaging, native Tk
+  creation, NumPy matrix/inference/cache/layer-release smoke and local-state tests.
+
+The initial Windows attempts exposed NSIS path-specification issues; the final
+build uses explicit project-root paths and native Windows path separators.
+No physical device or macOS Ventura execution has been performed by this task.
+The release workflow builds the same tagged source and attaches successful native
+packages plus SHA256SUMS.txt; inspect that run for release-upload completion.
 
 Not established by these checks: performance on arbitrary models, actual
 low-memory device behavior, power/thermal behavior, UAC behavior on all machines,
@@ -52,8 +62,3 @@ Runtime/tokenizer/activations/KV state still use RAM, and native allocators or O
 caches may retain released memory. Large models reread weights for every token
 and can be impractically slow. No usable 70B performance claim is made.
 
-The first native hosted run passed Linux checks and Intel Mac packaging/Tk/NumPy
-checks. Windows C# compilation succeeded but NSIS failed to find a bundled input.
-Installer paths were made explicit before rerunning native checks. Consult the
-workflow result for the final status; this note does not claim a native Windows
-installer success before that rerun completes.
