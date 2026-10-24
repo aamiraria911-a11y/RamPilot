@@ -21,6 +21,11 @@ Copy-Item 'catalog.json','RamPilot.ico' 'build/' -Force
 Copy-Item 'src/RamPilot.exe.config' 'build/' -Force
 $nsis=Get-Command makensis.exe -ErrorAction SilentlyContinue
 if($null -eq $nsis){$compiler=Join-Path ${env:ProgramFiles(x86)} 'NSIS/makensis.exe'}else{$compiler=$nsis.Source}
-& $compiler 'installer/RamPilot.nsi'
+foreach($requiredInput in @('vendor/vc_redist.x64.exe','build/RamPilot.exe','build/engine/python/python.exe')) {
+ $verifiedInput=Join-Path $PSScriptRoot $requiredInput
+ if(!(Test-Path -LiteralPath $verifiedInput -PathType Leaf)){throw "Missing installer input: $verifiedInput"}
+ Write-Host "Installer input verified: $requiredInput"
+}
+& $compiler "/DPROJECT_ROOT=$PSScriptRoot" (Join-Path $PSScriptRoot 'installer/RamPilot.nsi')
 if($LASTEXITCODE -ne 0){throw 'Installer build failed'}
 Write-Host 'Built dist/RamPilot-Setup-2.1.0.exe'

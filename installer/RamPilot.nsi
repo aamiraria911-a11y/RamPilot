@@ -1,10 +1,13 @@
 Unicode True
+!ifndef PROJECT_ROOT
+ !define PROJECT_ROOT ".."
+!endif
 !include "MUI2.nsh"
 !include "LogicLib.nsh"
 !include "x64.nsh"
 !include "WinVer.nsh"
 Name "RamPilot"
-OutFile "../dist/RamPilot-Setup-2.1.0.exe"
+OutFile "${PROJECT_ROOT}/dist/RamPilot-Setup-2.1.0.exe"
 InstallDir "$LOCALAPPDATA\Programs\RamPilot"
 InstallDirRegKey HKCU "Software\RamPilot" "InstallDir"
 RequestExecutionLevel user
@@ -17,13 +20,13 @@ VIAddVersionKey "ProductName" "RamPilot"
 VIAddVersionKey "FileDescription" "RamPilot Windows Installer"
 VIAddVersionKey "FileVersion" "2.1.0"
 VIAddVersionKey "LegalCopyright" "RamPilot contributors. MIT license."
-!define MUI_ICON "../RamPilot.ico"
-!define MUI_UNICON "../RamPilot.ico"
+!define MUI_ICON "${PROJECT_ROOT}/RamPilot.ico"
+!define MUI_UNICON "${PROJECT_ROOT}/RamPilot.ico"
 !define MUI_ABORTWARNING
 !define MUI_WELCOMEPAGE_TITLE "Welcome to RamPilot"
 !define MUI_WELCOMEPAGE_TEXT "Run local language models on your CPU using system RAM. No GPU, separate Python install, account or API key required.$\r$\n$\r$\nSetup includes the Python and PyTorch CPU engine. Models are read one decoder block at a time. Download SafeTensors weights inside the app or import a compatible model folder.$\r$\n$\r$\nWindows 10/11 x64 with .NET Framework 4.8 is required. If needed, setup installs the included Microsoft Visual C++ runtime, which may request administrator permission."
 !insertmacro MUI_PAGE_WELCOME
-!insertmacro MUI_PAGE_LICENSE "../LICENSE.txt"
+!insertmacro MUI_PAGE_LICENSE "${PROJECT_ROOT}/LICENSE.txt"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_RUN "$INSTDIR\RamPilot.exe"
@@ -66,7 +69,7 @@ Section "RamPilot" SEC_MAIN
  ${OrIf} $1 < 44
   InitPluginsDir
   SetOutPath "$PLUGINSDIR"
-  File "../vendor/vc_redist.x64.exe"
+  File "${PROJECT_ROOT}/vendor/vc_redist.x64.exe"
   DetailPrint "Installing Microsoft Visual C++ x64 runtime..."
   ClearErrors
   ExecShellWait "runas" "$PLUGINSDIR\vc_redist.x64.exe" "/install /passive /norestart" SW_SHOWNORMAL $0
@@ -83,15 +86,15 @@ Section "RamPilot" SEC_MAIN
   ${EndIf}
  ${EndIf}
  SetOutPath "$INSTDIR"
- File "../build/RamPilot.exe"
- File "../build/RamPilot.exe.config"
- File "../catalog.json"
- File "../RamPilot.ico"
- File "../README.txt"
- File "../LICENSE.txt"
- File "../THIRD-PARTY-NOTICES.txt"
+ File "${PROJECT_ROOT}/build/RamPilot.exe"
+ File "${PROJECT_ROOT}/build/RamPilot.exe.config"
+ File "${PROJECT_ROOT}/catalog.json"
+ File "${PROJECT_ROOT}/RamPilot.ico"
+ File "${PROJECT_ROOT}/README.txt"
+ File "${PROJECT_ROOT}/LICENSE.txt"
+ File "${PROJECT_ROOT}/THIRD-PARTY-NOTICES.txt"
  SetOutPath "$INSTDIR\engine"
- File /r /x "*.lib" /x ".*" /x "__pycache__" /x "include" "../build/engine/*"
+ File /r /x "*.lib" /x ".*" /x "__pycache__" /x "include" "${PROJECT_ROOT}/build/engine/*"
  SetOutPath "$INSTDIR"
  WriteUninstaller "$INSTDIR\Uninstall.exe"
  CreateDirectory "$SMPROGRAMS\RamPilot"

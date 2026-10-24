@@ -25,8 +25,9 @@
   visually inspected. The Windows settings page scrolls when it does not fit.
   These renders used Linux Mono/Tk, not the platforms' native window systems.
 - Source compilation, the native NumPy smoke fixture, and Python syntax checks
-  passed. The existing v2 C# client/server lifecycle test is retained for full
-  real-model integration runs.
+  passed. The real-model C# client/server integration also passed: model load,
+  templates/token counts, streamed generation, old-turn trimming, oversized
+  prompt rejection, cancellation, one-group metrics, unload and cancelled startup.
 
 ## Packaging and native validation
 
@@ -50,3 +51,9 @@ Budget checks are advisory allocation planning, not hard OS memory ceilings.
 Runtime/tokenizer/activations/KV state still use RAM, and native allocators or OS
 caches may retain released memory. Large models reread weights for every token
 and can be impractically slow. No usable 70B performance claim is made.
+
+The first native hosted run passed Linux checks and Intel Mac packaging/Tk/NumPy
+checks. Windows C# compilation succeeded but NSIS failed to find a bundled input.
+Installer paths were made explicit before rerunning native checks. Consult the
+workflow result for the final status; this note does not claim a native Windows
+installer success before that rerun completes.
