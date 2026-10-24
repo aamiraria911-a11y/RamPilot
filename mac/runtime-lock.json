@@ -1,0 +1,28 @@
+{
+  "python": {
+    "file": "cpython-3.11.10+20241016-x86_64-apple-darwin-install_only.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20241016/cpython-3.11.10%2B20241016-x86_64-apple-darwin-install_only.tar.gz",
+    "sha256": "1e23ffe5bc473e1323ab8f51464da62d77399afb423babf67f8e13c82b69c674",
+    "bytes": 18165899
+  },
+  "wheels": [
+    {
+      "file": "regex-2026.9.29-cp311-cp311-macosx_10_9_x86_64.whl",
+      "sha256": "b7b893976e7fe42053da64f2aa27239c24252fd2ec6df471e1be197c0addc3b1",
+      "bytes": 295145,
+      "url": "https://files.pythonhosted.org/packages/3a/a5/0c791a0e83ad1013d262c13247c4c77e0f4a8d05bdc167df96aba6681c0d/regex-2026.9.29-cp311-cp311-macosx_10_9_x86_64.whl"
+    },
+    {
+      "file": "certifi-2026.10.23-py3-none-any.whl",
+      "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1",
+      "bytes": 135082,
+      "url": "https://files.pythonhosted.org/packages/32/d1/a3652fe2c19134d0d15922177821d863cbd7e842d53a21bbe7e8e3a1b5ac/certifi-2026.10.23-py3-none-any.whl"
+    },
+    {
+      "file": "numpy-1.26.4-cp311-cp311-macosx_10_9_x86_64.whl",
+      "sha256": "4c66707fabe114439db9068ee468c26bbdf909cac0fb58686a42a24de1760c71",
+      "bytes": 20630554,
+      "url": "https://files.pythonhosted.org/packages/11/57/baae43d14fe163fa0e4c47f307b6b2511ab8d7d30177c491960504252053/numpy-1.26.4-cp311-cp311-macosx_10_9_x86_64.whl"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+RamPilot 2.0.0 third-party notices
+
+This package contains Python 3.11.9 (PSF license), PyTorch 2.6.0+cpu (BSD-style),
+Transformers 4.48.3 (Apache-2.0), SafeTensors 0.5.3 (Apache-2.0), NumPy 2.2.6,
+Tokenizers 0.21.4, psutil 6.1.1, and their runtime dependencies.
+Original package license and notice files are preserved in the runtime tree,
+including Python LICENSE.txt and each package's .dist-info license files.
+See runtime-lock.json in the source package for exact wheels and SHA-256.
+PyTorch is a CPU-only build; no CUDA libraries are bundled. Static C++ headers
+and .lib development archives are excluded from the installer.
+
+Microsoft Visual C++ x64 Redistributable is redistributed unmodified from
+Microsoft. Its own installer supplies its license terms.
+SHA-256: 843068991daaa1f73ad9f6239bce4d0f6a07a51f18c37ea2a867e9beca71295c
+
+Model weights are not bundled. Qwen2.5 0.5B and 1.5B: Apache-2.0.
+Qwen2.5 3B: Qwen Research License. Check each model card before use.
+
+INTEL MAC BUILD
+Includes Astral python-build-standalone CPython 3.11.10 (Python Software
+Foundation license and bundled dependency licenses), Tcl/Tk (Tcl/Tk license),
+NumPy 1.26.4 (BSD and bundled OpenBLAS notices), regex (Apache/CNRI notices)
+and certifi (Mozilla Public License 2.0). Original licenses are retained in
+the runtime and package distribution directories. Exact publisher archives,
+URLs and SHA-256 values are recorded in mac/runtime-lock.json. This Mac
+build uses NumPy and does not bundle PyTorch or CUDA.
+
+App icons are generated from the project's own code-native chip mark and
+are covered by the project's MIT license. Models have their own licenses;
+model weights are not bundled with the app or source repository.

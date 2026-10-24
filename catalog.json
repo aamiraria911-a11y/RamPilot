@@ -1,0 +1,143 @@
+[
+  {
+    "Name": "Qwen 2.5 0.5B \u00b7 Layer streaming",
+    "FileName": "Qwen2.5-0.5B.stream.json",
+    "DirectoryName": "Qwen2.5-0.5B-Instruct",
+    "Files": [
+      {
+        "Name": "config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/config.json?download=true",
+        "Sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+        "Bytes": 659
+      },
+      {
+        "Name": "generation_config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/generation_config.json?download=true",
+        "Sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "Bytes": 242
+      },
+      {
+        "Name": "model.safetensors",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/model.safetensors?download=true",
+        "Sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+        "Bytes": 988097824
+      },
+      {
+        "Name": "tokenizer.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/tokenizer.json?download=true",
+        "Sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "Bytes": 7031645
+      },
+      {
+        "Name": "tokenizer_config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/tokenizer_config.json?download=true",
+        "Sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "Bytes": 7305
+      }
+    ],
+    "Bytes": 995137675,
+    "Description": "Explicit disk \u2192 CPU \u2192 release. Only one decoder block is loaded at a time.",
+    "License": "Apache-2.0",
+    "Page": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+    "Repo": "Qwen/Qwen2.5-0.5B-Instruct",
+    "Revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  {
+    "Name": "Qwen 2.5 1.5B \u00b7 Layer streaming",
+    "FileName": "Qwen2.5-1.5B.stream.json",
+    "DirectoryName": "Qwen2.5-1.5B-Instruct",
+    "Files": [
+      {
+        "Name": "config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/config.json?download=true",
+        "Sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "Bytes": 660
+      },
+      {
+        "Name": "generation_config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/generation_config.json?download=true",
+        "Sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "Bytes": 242
+      },
+      {
+        "Name": "model.safetensors",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/model.safetensors?download=true",
+        "Sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "Bytes": 3087467144
+      },
+      {
+        "Name": "tokenizer.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/tokenizer.json?download=true",
+        "Sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "Bytes": 7031645
+      },
+      {
+        "Name": "tokenizer_config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/tokenizer_config.json?download=true",
+        "Sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "Bytes": 7305
+      }
+    ],
+    "Bytes": 3094506996,
+    "Description": "Explicit disk \u2192 CPU \u2192 release. Only one decoder block is loaded at a time.",
+    "License": "Apache-2.0",
+    "Page": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+    "Repo": "Qwen/Qwen2.5-1.5B-Instruct",
+    "Revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  {
+    "Name": "Qwen 2.5 3B \u00b7 Layer streaming",
+    "FileName": "Qwen2.5-3B.stream.json",
+    "DirectoryName": "Qwen2.5-3B-Instruct",
+    "Files": [
+      {
+        "Name": "config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json?download=true",
+        "Sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "Bytes": 661
+      },
+      {
+        "Name": "generation_config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/generation_config.json?download=true",
+        "Sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "Bytes": 242
+      },
+      {
+        "Name": "model-00001-of-00002.safetensors",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/model-00001-of-00002.safetensors?download=true",
+        "Sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "Bytes": 3968658944
+      },
+      {
+        "Name": "model-00002-of-00002.safetensors",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/model-00002-of-00002.safetensors?download=true",
+        "Sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "Bytes": 2203268048
+      },
+      {
+        "Name": "model.safetensors.index.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/model.safetensors.index.json?download=true",
+        "Sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "Bytes": 35581
+      },
+      {
+        "Name": "tokenizer.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer.json?download=true",
+        "Sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "Bytes": 7031645
+      },
+      {
+        "Name": "tokenizer_config.json",
+        "Url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/resolve/aa8e72537993ba99e69dfaafa59ed015b17504d1/tokenizer_config.json?download=true",
+        "Sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "Bytes": 7305
+      }
+    ],
+    "Bytes": 6179002426,
+    "Description": "Explicit disk \u2192 CPU \u2192 release. Only one decoder block is loaded at a time.",
+    "License": "Qwen Research License",
+    "Page": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct",
+    "Repo": "Qwen/Qwen2.5-3B-Instruct",
+    "Revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  }
+]
